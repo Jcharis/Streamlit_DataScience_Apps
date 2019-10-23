@@ -1,3 +1,22 @@
+"""
+## App: NLP App with Streamlit (NLPiffy)
+Author: [Jesse E.Agbe(JCharis)](https://github.com/Jcharis))\n
+Source: [Github](https://github.com/Jcharis/Streamlit_DataScience_Apps/)
+Credits: Streamlit Team,Marc Skov Madsen(For Awesome-streamlit gallery)
+
+Description
+This is a Natural Language Processing(NLP) Based App useful for basic NLP concepts such as follows;
++ Tokenization & Lemmatization using Spacy
++ Named Entity Recognition(NER) using SpaCy
++ Sentiment Analysis using TextBlob
++ Document/Text Summarization using Gensim/Sumy
+This is built with Streamlit Framework, an awesome framework for building ML and NLP tools.
+
+Purpose
+To perform basic and useful NLP task with Streamlit,Spacy,Textblob and Gensim/Sumy
+
+"""
+# Core Pkgs
 import streamlit as st 
 import os
 
@@ -7,13 +26,13 @@ from textblob import TextBlob
 import spacy
 from gensim.summarization import summarize
 
-# Sumy Pkg
+# Sumy Summary Pkg
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lex_rank import LexRankSummarizer
 
 
-# Sumy 
+# Function for Sumy Summarization
 def sumy_summarizer(docx):
 	parser = PlaintextParser.from_string(docx,Tokenizer("english"))
 	lex_summarizer = LexRankSummarizer()
@@ -22,7 +41,7 @@ def sumy_summarizer(docx):
 	result = ' '.join(summary_list)
 	return result
 
-# Analyse Tokens and Lemma
+# Function to Analyse Tokens and Lemma
 @st.cache
 def text_analyzer(my_text):
 	nlp = spacy.load('en')
@@ -48,6 +67,12 @@ def main():
 	# Title
 	st.title("NLPiffy with Streamlit")
 	st.subheader("Natural Language Processing On the Go..")
+	st.markdown("""
+    	#### Description
+    	+ This is a Natural Language Processing(NLP) Based App useful for basic NLP task
+    	Tokenization,NER,Sentiment,Summarization
+
+    	""")
 
 	# Tokenization
 	if st.checkbox("Show Tokens and Lemma"):
