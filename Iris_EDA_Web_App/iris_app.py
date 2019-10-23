@@ -1,10 +1,19 @@
 """
-## Iris EDA App
-
-DESCRIPTION
-
+## App: Iris EDA App
 Author: [Jesse E.Agbe(JCharis)](https://github.com/Jcharis))\n
 Source: [Github](https://github.com/Jcharis/Machine-Learning-Web-Apps/tree/master/Iris_EDA_Web_App)
+Credits: Streamlit Team,Marc Skov Madsen(For Awesome-streamlit gallery)
+
+Description
+This is a simple Exploratory Data Analysis of the Iris Dataset depicting the various 
+species built with Streamlit.
+We can preview the dataset,column names as well as show some basic plot with matplotlib and
+seaborn.
+There is also an image manipulation of a specie with changeable contrast and width using st.slider()
+
+Purpose
+To show a simple EDA of Iris using Streamlit framework. 
+
 """
 import streamlit as st
 
@@ -26,7 +35,7 @@ def main():
     	+ This is a simple Exploratory Data Analysis  of the Iris Dataset depicting the various species built with Streamlit.
 
     	#### Purpose
-    	+ Show a simple EDA of Iris using Streamlit framework. 
+    	+ To show a simple EDA of Iris using Streamlit framework. 
     	""")
 
     # Your code goes below
