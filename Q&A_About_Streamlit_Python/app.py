@@ -1,6 +1,7 @@
 # Load Pkgs
 import streamlit as st 
 import matplotlib.pyplot as plt
+import os
 
 
 st.subheader("Frequently Asked Questions About Streamlit")
