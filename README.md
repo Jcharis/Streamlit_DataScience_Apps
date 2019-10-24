@@ -49,7 +49,7 @@ enableCORS = false\n\
 
 ##### Code For Procfile
 ```sh
-web: sh setup.sh $$ streamlit run app.py
+web: sh setup.sh && streamlit run your_app.py
 ```
 
 #### 7. Create App with CLI
