@@ -3,6 +3,12 @@ import joblib,os
 import spacy
 import pandas as pd
 nlp = spacy.load('en')
+import matplotlib.pyplot as plt 
+import matplotlib
+matplotlib.use("Agg")
+from PIL import Image
+from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
+
 
 # load Vectorizer For Gender Prediction
 news_vectorizer = open("models/final_news_cv_vectorizer.pkl","rb")
@@ -29,7 +35,14 @@ def get_key(val,my_dict):
 def main():
 	"""News Classifier"""
 	st.title("News Classifier")
-	st.subheader("ML App with Streamlit")
+	# st.subheader("ML App with Streamlit")
+	html_temp = """
+	<div style="background-color:blue;padding:10px">
+	<h1 style="color:white;text-align:center;">Streamlit ML App </h1>
+	</div>
+
+	"""
+	st.markdown(html_temp,unsafe_allow_html=True)
 
 	activity = ['Prediction','NLP']
 	choice = st.sidebar.selectbox("Select Activity",activity)
@@ -49,19 +62,19 @@ def main():
 			if model_choice == 'LR':
 				predictor = load_prediction_models("models/newsclassifier_Logit_model.pkl")
 				prediction = predictor.predict(vect_text)
-				st.write(prediction)
+				# st.write(prediction)
 			elif model_choice == 'RFOREST':
 				predictor = load_prediction_models("models/newsclassifier_RFOREST_model.pkl")
 				prediction = predictor.predict(vect_text)
-				st.write(prediction)
+				# st.write(prediction)
 			elif model_choice == 'NB':
 				predictor = load_prediction_models("models/newsclassifier_NB_model.pkl")
 				prediction = predictor.predict(vect_text)
-				st.write(prediction)
+				# st.write(prediction)
 			elif model_choice == 'DECISION_TREE':
 				predictor = load_prediction_models("models/newsclassifier_CART_model.pkl")
 				prediction = predictor.predict(vect_text)
-				st.write(prediction)
+				# st.write(prediction)
 
 			final_result = get_key(prediction,prediction_labels)
 			st.success("News Categorized as:: {}".format(final_result))
@@ -94,6 +107,16 @@ def main():
 
 			new_df = pd.DataFrame(zip(c_tokens,c_lemma,c_pos),columns=['Tokens','Lemma','POS'])
 			st.dataframe(new_df)
+
+
+		if st.checkbox("WordCloud"):
+			c_text = raw_text
+			wordcloud = WordCloud().generate(c_text)
+			plt.imshow(wordcloud,interpolation='bilinear')
+			plt.axis("off")
+			st.pyplot()
+
+
 
 
 
