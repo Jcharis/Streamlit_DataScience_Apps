@@ -7,14 +7,14 @@
 + [Official Docs](https://docs.streamlit.io/en/stable/)
 
 #### About Layouts in Streamlit with Beta_columns
-![](layout_in_streamlit_jcharistech.png)
+![](images/layout_in_streamlit_jcharistech.png)
 
 
 #### Screenshots
-![](image/awesome_layout_streamlit03.png)
+![](images/awesome_layout_streamlit03.png)
 
 
-![](awesome_layout_streamlit04.png)
+![](images/awesome_layout_streamlit04.png)
 
 
 #### Thanks For Your Time
