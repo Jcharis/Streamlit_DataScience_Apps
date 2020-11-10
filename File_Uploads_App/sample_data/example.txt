@@ -1,0 +1,11 @@
+Natural language processing (NLP) is a subfield of linguistics, computer science, information engineering, and artificial intelligence concerned with the interactions between computers and human (natural) languages, in particular how to program computers to process and analyze large amounts of natural language data.
+
+Challenges in natural language processing frequently involve speech recognition, natural language understanding, and natural-language generation.
+Natural language processing has its roots in the 1950s. Already in 1950, Alan Turing published an article titled "Computing Machinery and Intelligence" which proposed what is now called the Turing test as a criterion of intelligence, a task that involves the automated interpretation and generation of natural language, but at the time not articulated as a problem separate from artificial intelligence.
+
+
+
+"421456,How about this report on him https://www.hsgac.senate.gov/imo/media/doc/FOREIGNCORRUPTIONREPORTFINAL710.pdf. He “went” home yesterday really ’late’.
+337171,My Biggest Remembrance of @OfficialPDPNig #IRememberPDP #NeverAgainPDP This Road heading to @atiku's home town JADA, Reconstructed by @MBuhari administration, I have a tangible reasons to Vote for Buhari. #NigeriaDecides2019 #NigeriaDecides
+298355,Sir please don't forget the military when you enter !!!!!
+855421,#16Black is giving back this holiday season! They‚Äôre collecting non perishables for Trinity Klein food pantry. They will be collecting donations at The Edge until December 20th. https://www.trinityklein.org/fpsupport/ #NextLevel #GivingBack"
