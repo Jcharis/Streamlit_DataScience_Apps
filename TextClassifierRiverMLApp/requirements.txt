@@ -1,0 +1,6 @@
+pandas==1.1.5
+altair==4.1.0
+matplotlib==3.3.4
+river==0.7.0
+streamlit==0.81.0
+seaborn==0.11.1
