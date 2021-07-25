@@ -1,0 +1,6 @@
+streamlit
+pandas
+base58
+datetime
+psycopg2
+SQLAlchemy
