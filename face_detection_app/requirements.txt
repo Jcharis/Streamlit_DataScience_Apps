@@ -50,7 +50,7 @@ prompt-toolkit==3.0.3
 protobuf==3.11.3
 ptyprocess==0.6.0
 pydeck==0.2.1
-Pygments==2.5.2
+Pygments>=2.5.2
 pyparsing==2.4.6
 pyrsistent==0.15.7
 python-dateutil==2.8.0
@@ -68,7 +68,7 @@ toolz==0.10.0
 tornado==5.1.1
 traitlets==4.3.3
 tzlocal==2.0.0
-urllib3==1.25.8
+urllib3>=1.26.5
 validators==0.14.2
 watchdog==0.10.2
 wcwidth==0.1.8
