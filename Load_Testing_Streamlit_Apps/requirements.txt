@@ -1,4 +1,4 @@
-streamlit==0.88.0
+streamlit==1.11.1
 pandas==1.2.4
 numpy==1.19.5
 locustio==0.999
