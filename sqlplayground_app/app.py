@@ -1,3 +1,4 @@
+@@ -0,0 +1,73 @@
 # Core Pkgs
 import streamlit as st 
 import pandas as pd
@@ -32,7 +33,7 @@ def main():
 		st.subheader("HomePage")
 
 		# Columns/Layout
-		col1,col2 = st.beta_columns(2)
+		col1,col2 = st.columns(2)
 
 		with col1:
 			with st.form(key='query_form'):
@@ -41,7 +42,7 @@ def main():
 
 			# Table of Info
 
-			with st.beta_expander("Table Info"):
+			with st.expander("Table Info"):
 				table_info = {'city':city,'country':country,'countrylanguage':countrylanguage}
 				st.json(table_info)
 			
@@ -53,10 +54,10 @@ def main():
 
 				# Results 
 				query_results = sql_executor(raw_code)
-				with st.beta_expander("Results"):
+				with st.expander("Results"):
 					st.write(query_results)
 
-				with st.beta_expander("Pretty Table"):
+				with st.expander("Pretty Table"):
 					query_df = pd.DataFrame(query_results)
 					st.dataframe(query_df)
 
@@ -70,4 +71,3 @@ def main():
 
 if __name__ == '__main__':
 	main()
-
