@@ -1,4 +1,3 @@
-@@ -0,0 +1,73 @@
 # Core Pkgs
 import streamlit as st 
 import pandas as pd
